@@ -21,7 +21,10 @@ public class GitTest{
             System.out.println(out);
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        } finally {
+            if (null != process) {
+                process.destroy();  //注意process一定要释放
+       }
     }
 }
 
@@ -35,5 +38,8 @@ public class GitTest{
 
 3、java使用ssh连接Linux并执行命令
 https://www.cnblogs.com/xiaoliu66007/p/11084208.html
+
+4、Process#waitFor()阻塞问题
+https://blog.csdn.net/zero__007/article/details/88979811
 
 */
