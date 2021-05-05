@@ -5,8 +5,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author: ly
- * @date:2021/5/5 - 9:37
+ * ｙｍｌ配置文件，增加如下配置
+ 
+    #gitub克隆配置
+    gitClone:
+      cmd: cmd
+      param: "/C"
+      url:  https://gitee.com/mingxin400/aop.git
+    #　url:  https://gitee.com/zycgit/hasor.git
+      dir: d:/tmp
  */
 @Configuration
 @ConfigurationProperties(prefix = "gitClone")
